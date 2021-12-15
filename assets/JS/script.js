@@ -269,7 +269,7 @@ function main() {
 		answerDisplay.append("0");
 	}
 
-	for (let button of numButtons) {
+	numButtons.forEach(button => {
 		button.addEventListener("click", () => {
 			if (currStr === num1 && currStr.length <= 16) {
 				num1 = num1.substring(0) + button.value;
@@ -282,7 +282,7 @@ function main() {
 			}
 		});
 		displayButtonPress(button);
-	}
+	});
 
 	for (let operand of operandButtons) {
 		operand.addEventListener("click", () => {
